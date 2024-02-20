@@ -86,7 +86,8 @@
                 display: true,
                 position: 'bottom'
               }
-            }
+            },
+            color: 'white',
           }
         });
 
