@@ -69,6 +69,15 @@ document.addEventListener('DOMContentLoaded', function () {
         renderChampions(filteredChampions);
       });
 
+      // Agregar evento al presionar la tecla "Enter" en el campo de búsqueda
+      searchInput.addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+          const searchTerm = searchInput.value.toLowerCase();
+          const filteredChampions = champions.filter(champion => champion.name.toLowerCase().includes(searchTerm));
+          renderChampions(filteredChampions);
+        }
+      });
+
       switchInput.addEventListener('change', function () {
         isGrid = !isGrid;
         renderChampions(champions);
