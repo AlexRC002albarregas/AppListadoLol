@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
   const apiKey = 'RGAPI-5c939060-b4ca-443d-ae1e-0c4c775293ac';
   const url = 'https://ddragon.leagueoflegends.com/cdn/14.3.1/data/en_US/champion.json';
   const searchInput = document.getElementById('searchInput');
@@ -84,4 +83,4 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     })
     .catch(error => console.error('Error:', error));
-});
+
