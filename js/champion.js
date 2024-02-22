@@ -108,7 +108,7 @@ fetch(championDetailsUrl)
     const baseStatsList = document.createElement('ul');
     baseStatsList.classList.add('list-group', 'list-group-flush');
     baseStatsList.innerHTML = `
-      <li class="list-group-item"><b>Base Stats</b></li>
+      <li class="list-group-item no-hover"><b>Base Stats</b></li>
       <li class="list-group-item">HP: ${champion.stats.hp}</li>
       <li class="list-group-item">Movespeed: ${champion.stats.movespeed}</li>
       <li class="list-group-item">Armor: ${champion.stats.armor}</li>
@@ -116,8 +116,8 @@ fetch(championDetailsUrl)
       <li class="list-group-item">Attack Damage: ${champion.stats.attackdamage}</li>
     `;
 
-    // Agregar efecto de hover a cada elemento de la lista
-    const baseStatsItems = baseStatsList.querySelectorAll('.list-group-item');
+    // Agregar efecto de hover a cada elemento de la lista, excepto al encabezado "Base Stats"
+    const baseStatsItems = baseStatsList.querySelectorAll('.list-group-item:not(.no-hover)');
     baseStatsItems.forEach(item => {
       item.classList.add('base-stat-item');
     });
